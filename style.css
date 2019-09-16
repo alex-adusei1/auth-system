@@ -1,0 +1,55 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background:linear-gradient(
+      rgba(248, 248, 255, 0.4), rgba(2488, 248, 255, 0.4)), url('bg-02.jpg') center center no-repeat;
+}
+
+form {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 13%;
+}
+
+.header {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.form-group {
+    margin-bottom: 10%;
+}
+
+.form-group input {
+    opacity: 0.6;
+}
+  
+.form-control { 
+    width: 100%; 
+    padding: 10px; 
+} 
+
+.btn {
+    background-color: #40A3FE;
+    color: #000;
+    margin-left: 35%;
+    width: 30%;
+}
+
+.forgot-password {
+    display: flex;
+    width: 80%;
+}
+
+.forgot-password > a {
+    color: #0069D9;
+    margin-left: 25%;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.forgot-password a:hover {
+    color: orange;
+}
