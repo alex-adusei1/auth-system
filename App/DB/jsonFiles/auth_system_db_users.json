@@ -1,0 +1,22 @@
+{
+    "0":  {
+        "fullname" : "Christiano Ronaldo", 
+        "email" : "christiano@gmail.com",
+        "password": "christiano@123"
+    }, 
+    "1" : {
+        "fullname" : "Lionel Messi", 
+        "email" : "lionel@gmail.com",
+        "password": "lionel@123"
+    },
+    "2":  {
+        "fullname" : "Junior Neymar", 
+        "email" : "neymar_junior@gmail.com",
+        "password": "neymar@123"
+    }, 
+    "3" : {
+        "fullname" : "Mane Sadio", 
+        "email" : "mane@gmail.com",
+        "password": "mane@123"
+    }
+}
