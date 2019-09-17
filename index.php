@@ -5,43 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/cb6426b160.js"></script>
 </head>
-<body>
-          <nav class="header">
-                    <ul class="main-nav">
-                        <li><a href="#">Auth System</a></li>
-                    </ul>
-        </nav>
-          
-      
- <section id="loginbackground">
-           
-          <div class="login-container">
-               <div id="loginbox ">
-                    <h1>LOGIN</h1>
-                    <form action="">
-                        <div class="text"> <label for="username">Username</label></div>
-                        <input type="text" name="" placeholder="enter username">
+<body class="mg-tp">
+    <div class="login">
+        <form>
+            <span class="img-sp">
+                <img class="mb-4" src="images/brand.png" alt="brand" width="100" height="100">
+            </span>
+                <div class="header">
+                <h1 class="h2 mb-3 font-weight-normal">Please Login</h1>
+            </div>
+        
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="email"> 
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                </div>
+                <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="email">
+            </div>
 
-                        <div class="password"> <label for="password">Password</label> </div>
-                         <input type="password" name="" placeholder="enter password">
-                         <br>
-                         <div id="login">
-                         <button type="submit">Login</button></div> <br>
-                    
-                         <a href="#">forgot password?</a>   <br>
-                        <div id="create"> <a href="#">create an account</a></div>
-                       
-                    </form>
- 
-               </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="password">
+                    <i class="fa fa-lock"></i>
+                    </span>
+                </div>
+                <input type="password" class="form-control" placeholder="Password" aria-label="password" aria-describedby="password">
+            </div>
 
-          </div>
-
-     </section>
-</div>
-    
-
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> 
+                    <span class="font-weight-normal wh-tx"> Remember me </span>
+                </label>
+            </div>
+            <div class="form-group"> 
+                <button type="submit" class="btn btn-success btn-lg btn-block">
+                    Login
+                </button>
+            </div>
+            
+        </form>
+        <span class="extras">
+            <a href="#" class="li-lf">Forgot password?</a>
+            <a href="#" class="li-rg">Don't have an account?</a> 
+        </span>
 </body>
 </html>
