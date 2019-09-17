@@ -33,6 +33,3 @@ class Auth
         return false;
     }
 }
-
-$auth = new Auth();
-$auth->doLogin('lex@email.com','lex@123');
