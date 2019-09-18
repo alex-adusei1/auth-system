@@ -11,21 +11,21 @@
 </head>
 <body class="mg-tp">
     <div class="login">
-        <form>
+        <form action="routes.php" method="post">
             <span class="img-sp">
                 <img class="mb-4" src="images/brand.png" alt="brand" width="100" height="100">
             </span>
                 <div class="header">
                 <h1 class="h2 mb-3 font-weight-normal">Please Login</h1>
             </div>
-        
+
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="email"> 
+                    <span class="input-group-text" id="email">
                         <i class="fa fa-envelope"></i>
                     </span>
                 </div>
-                <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="email">
+                <input type="email" class="form-control" placeholder="Email" aria-label="email" name="email" aria-describedby="email">
             </div>
 
             <div class="input-group mb-3">
@@ -34,25 +34,25 @@
                     <i class="fa fa-lock"></i>
                     </span>
                 </div>
-                <input type="password" class="form-control" placeholder="Password" aria-label="password" aria-describedby="password">
+                <input type="password" class="form-control" placeholder="Password" name="password" aria-label="password" aria-describedby="password">
             </div>
 
             <div class="checkbox mb-3">
                 <label>
-                    <input type="checkbox" value="remember-me"> 
+                    <input type="checkbox" value="remember-me">
                     <span class="font-weight-normal wh-tx"> Remember me </span>
                 </label>
             </div>
-            <div class="form-group"> 
-                <button type="submit" class="btn btn-success btn-lg btn-block">
+            <div class="form-group">
+                <button type="submit" name="login" class="btn btn-success btn-lg btn-block">
                     Login
                 </button>
             </div>
-            
+
         </form>
         <span class="extras">
             <a href="#" class="li-lf">Forgot password?</a>
-            <a href="#" class="li-rg">Don't have an account?</a> 
+            <a href="#" class="li-rg">Don't have an account?</a>
         </span>
 </body>
 </html>
