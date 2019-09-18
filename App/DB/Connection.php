@@ -2,11 +2,25 @@
 
 class Connection
 {
-    protected $servername = 'localhost';
-    protected $dbname = 'auth_system_db';
-    protected $username = 'root';
-    protected $password = '';
+    private $servername = 'localhost';
+    private $dbname = 'auth_system_db';
+    private $username = 'root';
+    private $password = '';
     protected $conn;
+    private static $instance;
+
+    public static function getInstance()
+    {
+        if (!isset(Connection::$instance)) {
+            Connection::$instance = new Connection();
+            return Connection::$instance;
+        }
+    }
+
+    private function __construct()
+    {
+        /** PRIVATE */
+    }
 
     public function connect()
     {
