@@ -1,6 +1,6 @@
 <?php
 
-include '../Models/User.php';
+include 'App/Models/User.php';
 
 class Auth
 {
@@ -9,9 +9,14 @@ class Auth
         $this->user = new User();
     }
 
-    public function doLogin($email, $password)
+    /**
+     * checks and validate incoming logins
+     */
+    public function doLogin()
     {
-        $auth_user = $this->user->getWhere(['email'=> $email]);
+        $email = $_REQUEST['email'];
+        $password = $_REQUEST['password'];
+        $auth_user = $this->user->getWhere(['email' => $email]);
 
         try {
             if ($auth_user) {
@@ -24,8 +29,20 @@ class Auth
         }
     }
 
-    private function validateUser($auth_user, $password): bool{
-        if ($auth_user->password == $password) {
+    /**
+     * Create a new record
+     */
+    public function doSignUp(array $data)
+    {
+        $this->user->save($data);
+    }
+
+    /**
+     * Validate login user
+     */
+    private function validateUser($auth_user, $password): bool
+    {
+        if (password_verify($password, $auth_user->password)) {
             echo 'user authenticated';
             return true;
         }

@@ -16,5 +16,10 @@ interface Base
      * get records based on a where condition
      */
     function getWhere(array $condition = []);
+
+    /**
+     * Inserts data into the database
+     */
+    function save(array $data);
     
 }
