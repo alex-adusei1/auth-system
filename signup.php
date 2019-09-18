@@ -11,7 +11,7 @@
 </head>
 <body class="mg-tp">
     <div class="login">
-        <form>
+        <form action="routes.php" method="post">
             <span class="img-sp">
                 <img class="mb-4" src="images/brand.png" alt="brand" width="100" height="100">
             </span>
@@ -25,7 +25,7 @@
                         <i class="fa fa-user"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control" placeholder="fullname" aria-label="fullname" aria-describedby="fullname">
+                <input type="text" class="form-control" name="fullname" placeholder="fullname" aria-label="fullname" aria-describedby="fullname" require>
             </div>
 
             <div class="input-group mb-3">
@@ -34,7 +34,7 @@
                         <i class="fa fa-envelope"></i>
                     </span>
                 </div>
-                <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="email">
+                <input type="email" class="form-control" placeholder="Email" aria-label="email" name="email" aria-describedby="email" require>
             </div>
 
             <div class="input-group mb-3">
@@ -43,11 +43,11 @@
                     <i class="fa fa-lock"></i>
                     </span>
                 </div>
-                <input type="password" class="form-control" placeholder="Password" aria-label="password" aria-describedby="password">
+                <input type="password" class="form-control" placeholder="Password" name="password" aria-label="password" aria-describedby="password" require>
             </div>
 
             <div class="form-group"> 
-                <button type="submit" class="btn btn-success btn-lg btn-block">
+                <button type="submit" name="signup" class="btn btn-success btn-lg btn-block">
                 Sign Up
                 </button>
             </div>
