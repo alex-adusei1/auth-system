@@ -7,5 +7,5 @@ if (isset($_POST['login'])) {
 }
 
 if (isset($_POST['signup'])) {
-    LoginController::logout();
+    LoginController::signup();
 }

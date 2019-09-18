@@ -1,16 +1,20 @@
 <?php
 
-class LoginController {
+class LoginController
+{
 
-    public static function login(){
+    public static function login()
+    {
         App::auth()->doLogin();
     }
 
-    public static function logout() {
+    public static function logout()
+    {
         App::auth()->doLogout();
     }
 
-    public static function signup() {
+    public static function signup()
+    {
         App::auth()->doSignUp();
     }
 }

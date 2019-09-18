@@ -48,9 +48,19 @@ class Auth
     /**
      * Create a new record
      */
-    public function doSignUp(array $data)
+    public function doSignUp()
     {
-        $this->user->save($data);
+        $request = array_filter($_REQUEST, function ($req) {
+            return strlen($req) > 0;
+        });
+
+        if ($this->user->save($request)) {
+            header("Location: welcome.php");
+            die();
+        }else {
+            header("Location: signup.php");
+            die();
+        }
     }
 
     /**

@@ -52,8 +52,8 @@
                 </button>
             </div>
         </form>
-        <span class="gi">
-            <a href="index.php" class="btn btn-warning btn-sm">Return to login page</a>
+        <span class="lo-g">
+            <a href="index.php">Return to login page</a>
         </span>
 </body>
 </html>
