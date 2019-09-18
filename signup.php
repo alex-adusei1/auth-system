@@ -15,10 +15,10 @@
             <span class="img-sp">
                 <img class="mb-4" src="images/brand.png" alt="brand" width="100" height="100">
             </span>
-                <div class="header">
+            <div class="header">
                 <h1 class="h2 mb-3 font-weight-normal">Create an account</h1>
             </div>
-
+            <?php include 'errors.php' ?>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="fullname"> 

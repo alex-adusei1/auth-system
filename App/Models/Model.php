@@ -35,7 +35,7 @@ class Model extends Connection implements Base
 
     /**
      * Get records based on a where condition
-     * 
+     *
      * @param array $condition
      * @return mixed
      */
@@ -47,7 +47,7 @@ class Model extends Connection implements Base
 
     /**
      * Insert record to DB
-     * 
+     *
      * @param array $data
      * @return mixed
      */
@@ -66,11 +66,12 @@ class Model extends Connection implements Base
                 }
 
                 return $stmt->execute();
-                
+
             }
         } catch (Exception $e) {
-            echo $e->getMessage();
             error_log($e->getMessage());
+            session_start();
+            $_SESSION['errors'] = $e->getMessage();
         }
     }
 
@@ -114,7 +115,7 @@ class Model extends Connection implements Base
 
     /**
      * Fetch data with the id
-     * 
+     *
      * @param int $id
      * @return mixed
      */
@@ -128,7 +129,7 @@ class Model extends Connection implements Base
 
     /**
      * Fetch all the data
-     * 
+     *
      * @return mixed
      */
     private function fetchAll()
@@ -170,9 +171,9 @@ class Model extends Connection implements Base
 
     /**
      * Determines value for insertion
-     * 
-     * @param array $data 
-     * @param string $normal 
+     *
+     * @param array $data
+     * @param string $normal
      * @param string $end
      * @return string
      */
