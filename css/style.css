@@ -76,6 +76,14 @@ a:active {
     margin-top: 20px;
 }
 
+.lo-g {
+    color: seashell;
+    font-weight: 400;
+    font-stretch: expanded;
+    text-decoration: none;
+    margin-left: 70px;
+}
+
 .li-lf {
     float: left;
     color: #fff;
