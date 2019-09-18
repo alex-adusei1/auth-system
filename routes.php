@@ -1,12 +1,11 @@
 <?php
-include 'App/Controller/Auth.php';
-
-$auth = new Auth();
+include 'App/Factories/App.php';
+include 'App/Controller/LoginController.php';
 
 if (isset($_POST['login'])) {
-    $auth->doLogin();
+    LoginController::login();
 }
 
 if (isset($_POST['signup'])) {
-    $auth->doSignUp();
+    LoginController::logout();
 }
