@@ -53,7 +53,7 @@
             </div>
         </form>
         <span>
-            <a href="index.php" class="lo-g">return to sign in page</a>
+            <a href="index.php" class="lo-g">Return to login page</a>
         </span>
 </body>
 </html>
