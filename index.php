@@ -38,10 +38,11 @@
             </div>
 
             <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me">
+            <label for="remember-me">
+                    <input type="checkbox" value="remember-me" name="remember" 
+                    <?php if(isset($_COOKIE["email"])) { ?> checked <?php } ?> >
                     <span class="font-weight-normal wh-tx"> Remember me </span>
-                </label>
+            </label>
             </div>
             <div class="form-group">
                 <button type="submit" name="login" class="btn btn-success btn-lg btn-block">
