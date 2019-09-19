@@ -34,11 +34,6 @@ a:active {
 }
 
 
-.login {
-    width: 20%;
-    margin: auto;
-}
-
 .header {
     color: #fff;
     text-align: center;
@@ -85,7 +80,6 @@ a:active {
     font-weight: 400;
     font-stretch: expanded;
     text-decoration: none;
-    margin-left: 95px;
 }
 
 .gi {
