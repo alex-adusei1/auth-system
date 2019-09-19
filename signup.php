@@ -47,8 +47,8 @@
             </div>
 
             <div class="form-group"> 
-                <button type="submit" name="signup" class="btn btn-success btn-lg btn-block">
-                Sign Up
+                <button type="submit" name="signup" class="btn btn-success btn-md btn-block">
+                <span class="spinner-grow text-light spinner" role="status" role="status"></span> Sign Up
                 </button>
             </div>
         </form>

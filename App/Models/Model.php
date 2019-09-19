@@ -22,6 +22,7 @@ class Model implements Base
                 if ($this->conn->connect_error) {
                     throw new Exception("Connection failed: " . $this->conn->connect_error);
                 }
+                return;
             }
             $this->conn = new mysqli($_SERVER['HTTP_HOST'], 'root', '', 'auth_system_db');
             if ($this->conn->connect_error) {

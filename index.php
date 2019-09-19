@@ -45,8 +45,8 @@
             </label>
             </div>
             <div class="form-group">
-                <button type="submit" name="login" class="btn btn-success btn-lg btn-block">
-                    Login
+                <button type="submit" name="login" class="btn btn-success btn-md btn-block">
+                <span class="spinner-grow text-light spinner" role="status" role="status"></span> Login
                 </button>
             </div>
 

@@ -29,6 +29,10 @@ a:active {
     margin-top: 10%;
 }
 
+.spinner {
+    margin-left:-20px
+}
+
 
 .login {
     width: 20%;
