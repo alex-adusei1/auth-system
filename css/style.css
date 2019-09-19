@@ -111,9 +111,14 @@ a:active {
     font-stretch: expanded;
 }
 
+.main {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
 
 .li-lf {
-    float: left;
     color: #fff;
     font-weight: 400;
     font-stretch: expanded;
@@ -121,7 +126,6 @@ a:active {
 }
 
 .li-rg {
-    float: right;
     color: #fff;
     font-weight: 400;
     font-stretch: expanded;

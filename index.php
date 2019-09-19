@@ -9,13 +9,10 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/cb6426b160.js"></script>
 </head>
-<body class="mg-tp">
-    <div class="login">
-        <form action="routes.php" method="post">
-            <span class="img-sp">
-                <img class="mb-4" src="images/brand.png" alt="brand" width="100" height="100">
-            </span>
-                <div class="header">
+<body class="text-center">
+        <form action="routes.php" method="post" class="main">
+            <img class="mb-4" src="images/brand.png" alt="brand" width="100" height="100">
+            <div class="header">
                 <h1 class="h2 mb-3 font-weight-normal">Please Login</h1>
             </div>
             <?php include 'errors.php' ?>
@@ -48,12 +45,14 @@
                 <button type="submit" name="login" class="btn btn-success btn-md btn-block">
                 <span class="spinner-grow text-light spinner" role="status" role="status"></span> Login
                 </button>
+                <p class="mt-5 mb-3 text-light">&copy; <?php echo date('Y-m-d')?></p>
             </div>
 
         </form>
-        <span class="extras">
+        <span class="text-center">
             <a href="#" class="li-lf">Forgot password?</a>
             <a href="signup.php" class="li-rg">Don't have an account?</a> 
         </span>
+<!-- </div> -->
 </body>
 </html>
