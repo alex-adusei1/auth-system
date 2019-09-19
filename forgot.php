@@ -14,7 +14,7 @@
                 <form action="routes.php" method="post" class="main">
                     <img class="mb-4" src="images/brand.png" alt="brand" width="100" height="100">
                     <div class="header">
-                        <h1 class="h2 mb-3 font-weight-normal">Reset Password</h1>
+                        <h1 class="h2 mb-3 font-weight-normal text-dark">Reset Password</h1>
                     </div>
                     <?php include 'errors.php' ?>
                     <div class="input-group mb-3">
@@ -34,16 +34,18 @@
                             <i class="fa fa-lock"></i>
                             </span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Password" name="password" aria-label="password" aria-describedby="password" require>
+                        <input type="password" class="form-control" minlength="8" placeholder="Password" name="password" aria-label="password" aria-describedby="password" require>
+                        <small class="form-text text-dark">The password must be 8 characters minimum</small>
                     </div>
-                    
+
                         <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="password">
                                     <i class="fa fa-lock"></i>
                                     </span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="Confirm Password" name="confirm" aria-label="password" aria-describedby="password" require>
+                                <input type="password" class="form-control" minlength="8" placeholder="Confirm Password" name="confirm" aria-label="password" aria-describedby="password" require>
+                                <small class="form-text text-dark">Confrim password must be the same as password</small>
                             </div>
         
                     <div class="form-group"> 

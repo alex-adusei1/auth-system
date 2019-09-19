@@ -59,7 +59,7 @@ class Auth
         try {
             $email = filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL);
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                if ($this->validatePassword()) {
+                if ($this->validatePassword() && $this->checkpasswordLength()) {
                     return $this->updatePassword();
                 }
             }
@@ -79,13 +79,13 @@ class Auth
             return strlen($req) > 0;
         });
 
-        if ($this->user->save($request)) {
-            $_SESSION['auth_user'] = new User($request);
-            header("Location:welcome.php");
-            die();
-        } else {
-            header("Location: signup.php");
-            die();
+        try {
+            if ($this->checkpasswordLength()) {
+                $this->signUp($request);
+            }
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+            $this->failedLogin($e->getMessage(), 'signup.php');
         }
     }
 
@@ -108,12 +108,33 @@ class Auth
         }
     }
 
+    private function signUp($request)
+    {
+        if ($this->user->save($request)) {
+            $_SESSION['auth_user'] = new User($request);
+            header("Location:welcome.php");
+            die();
+        } else {
+            header("Location: signup.php");
+            die();
+        }
+    }
+
     private function validatePassword(): bool
     {
         if ($_REQUEST['password'] == $_REQUEST['confirm']) {
             return true;
         }
         throw new ErrorException('Password Must Be The Same');
+        return false;
+    }
+
+    private function checkpasswordLength()
+    {
+        if (strlen($_REQUEST['password']) < 9) {
+            return true;
+        }
+        throw new ErrorException('Password Error <br><small> Password length is Greater than <stong>8</strong></small>');
         return false;
     }
 
