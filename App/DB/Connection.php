@@ -28,8 +28,8 @@ class Connection
             $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
             if ($this->conn->connect_error) {
                 throw new Exception("Connection failed: " . $this->conn->connect_error);
-                return;
             }
+            return $this->conn;
         } catch (Exception $e) {
             error_log($e->getMessage());
         }
