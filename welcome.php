@@ -12,16 +12,21 @@
     <script src="https://kit.fontawesome.com/cb6426b160.js"></script>
 </head>
 <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Authsys</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <span class="navbar-text">
-           <a href="#"><i class="fas fa-user"></i></a>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <div class="form-inline my-2 my-lg-0">
+           <i class="fas fa-user"></i> <?php echo ucwords($_SESSION['auth_user']->fullname)?> 
+           <span class="pl-3">
+             <a href="index.php" class="btn btn-outline-secondary btn-md my-2 my-sm-0"> Log Out</a>
           </span>
+        </div>
         </div>
       </nav>
 

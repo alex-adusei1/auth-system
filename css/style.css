@@ -29,11 +29,10 @@ a:active {
     margin-top: 10%;
 }
 
-
-.login {
-    width: 20%;
-    margin: auto;
+.spinner {
+    margin-left:-20px
 }
+
 
 .header {
     color: #fff;
@@ -81,7 +80,6 @@ a:active {
     font-weight: 400;
     font-stretch: expanded;
     text-decoration: none;
-    margin-left: 95px;
 }
 
 .gi {
@@ -107,9 +105,14 @@ a:active {
     font-stretch: expanded;
 }
 
+.main {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
 
 .li-lf {
-    float: left;
     color: #fff;
     font-weight: 400;
     font-stretch: expanded;
@@ -117,7 +120,6 @@ a:active {
 }
 
 .li-rg {
-    float: right;
     color: #fff;
     font-weight: 400;
     font-stretch: expanded;
