@@ -24,7 +24,7 @@
           <div class="form-inline my-2 my-lg-0">
            <i class="fas fa-user"></i> <?php echo ucwords($_SESSION['auth_user']->fullname)?> 
            <span class="pl-3">
-             <a href="index.php" class="btn btn-outline-secondary btn-md my-2 my-sm-0">Log Out</a>
+             <a href="index.php" class="btn btn-outline-secondary btn-md my-2 my-sm-0"> Log Out</a>
           </span>
         </div>
         </div>
