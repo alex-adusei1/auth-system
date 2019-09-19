@@ -31,5 +31,3 @@ CREATE TABLE `users`  (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `email`(`email`) USING BTREE
 );
-
-SET FOREIGN_KEY_CHECKS = 1;
