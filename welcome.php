@@ -1,34 +1,38 @@
 <?php include 'checker.php' ?>
+<!-- Bootstrap Version -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome</title>
+    <title>Authsys</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/welcome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Livvic|Open+Sans|Roboto|Rubik|Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Gayathri|Heebo|Manjari|Montserrat|Poppins|Noto+Sans+JP|Noto+Sans+KR|Raleway&display=swap" rel="stylesheet">
-    
+    <script src="https://kit.fontawesome.com/cb6426b160.js"></script>
 </head>
 <body>
-    <div class="bg">
-           <div class="flex">
-               <div class="app">Authsys</div>
-            <div> <i class="fa fa-user icon" style="font-size:40px"></i></div>
-     
-            </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Authsys</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <span class="navbar-text">
+           <a href="#"><i class="fas fa-user"></i></a>
+          </span>
+        </div>
+      </nav>
 
-    <div class="container">
-          <div class="welcome">Welcome!</div>
-          <div class="username"> 
-          To Authsys <?php echo ucwords($_SESSION['auth_user']->fullname)?>
-            </div>
-          <div class="team">
-                Created With Love By Team Code Titans
-         </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Welcome!</h1>
+        <p class="lead">To Authsys User <?php echo ucwords($_SESSION['auth_user']->fullname)?></p>
+        <p class="lead">Created With Love By Team Code Titans</p>
+      </div>
     </div>
-</div>
+  </div>
 </body>
 </html>

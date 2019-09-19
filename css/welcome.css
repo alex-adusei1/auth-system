@@ -1,116 +1,16 @@
-body, html {
-    height: 100%;
-    margin: 0;
-  }
-  
-  .bg {
-    /* The image used */
+body {
     background-image: url("../images/welcome.jpeg");
-  
-    /* Full height */
-    height: 100%; 
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  
-.flex{
-    box-sizing: border-box;
-    display: flex;
-    padding: 10px 10px;
-    margin-left: 10px;
-    margin-right: 20px;
-    justify-content:space-between
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    height: 100%; 
 }
 
-.app{
-    font-size:27px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400
+.row .text-center{
+    margin-top: 10%;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 10%;
-    margin-left: 25%
-}
-
-.welcome{ 
-    font-size: 40px;
-    font-style: bold;
-    padding-bottom: 5px;
-    padding-left: 90px;
-    font-family: 'Poppins', sans-serif;;
-    margin-left: 30px
-     
-}
-.username{
-    margin-left: 70px;
-    padding-left: 90px;
-    font-family:'Manjari', sans-serif;
-    font-size: 17px;
-
-
-}
-.team{
-    padding-top: 15px;
-    align-self: auto;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 23px;
-    min-width: 200px;
-
-    
-}
-
-@media only screen and (max-width: 600px ){
-    .app{
-        font-size: 15px;
-        padding: 10px
-    }
-}
-
-
-@media only screen and (max-width: 600px ){
-    .team{
-        font-size: 15px;
-        padding:0
-    }
-}
-
-@media only screen and (max-width: 600px ){
-    .welcome{
-        padding-left: 50px;
-        font-size: 24px;
-        padding-bottom: 5px
-    
-    }
-}
-
-@media only screen and (max-width: 600px ){
-    .username{
-        font-size: 9px;
-        padding-left: 45px 
-    }
-}
-@media only screen and (max-width: 600px ){
-    body{
-        background: url(welcome\ .jpeg)no-repeat center center fixed;
-
-        background-size: cover
-    }
-}
-@media only screen and (max-width: 600px ){
-    .container{
-     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 10%;
-    width: 100%;
-    margin-left: 15%
-    }
+.navbar .navbar-text {
+    margin-left: 95% ;
 }
