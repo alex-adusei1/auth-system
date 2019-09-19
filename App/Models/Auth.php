@@ -16,6 +16,7 @@ class Auth
     private function __construct()
     {
         $this->user = App::user();
+        session_start();
     }
 
     /**
@@ -29,14 +30,19 @@ class Auth
 
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 if ($auth_user) {
-                    return $this->validateUser($auth_user, $_REQUEST['password']);
+                    if ($this->validateUser($auth_user, $_REQUEST['password'])) {
+                        $_SESSION['auth_user'] = $auth_user;
+                        header("Location:welcome.php");
+                        die();
+                    }
+                    throw new ErrorException('Failed to authenticate user. <br> <small>Please check your <strong>username</strong> or <strong> password</strong> </small>');
                 }
-                throw new ErrorException('user not found');
+                throw new ErrorException('User not found');
             }
             throw new ErrorException('Invalid Email');
         } catch (Exception $e) {
-            echo $e->getMessage();
             error_log($e->getMessage());
+            $this->failedLogin($e->getMessage());
         }
     }
 
@@ -55,9 +61,10 @@ class Auth
         });
 
         if ($this->user->save($request)) {
-            header("Location: welcome.php");
+            $_SESSION['auth_user'] = new User($request);
+            header("Location:welcome.php");
             die();
-        }else {
+        } else {
             header("Location: signup.php");
             die();
         }
@@ -69,10 +76,15 @@ class Auth
     private function validateUser($auth_user, $password): bool
     {
         if (password_verify($password, $auth_user->password)) {
-            echo 'user authenticated';
+            
             return true;
         }
-        echo 'failed to authenticate user. Please check your username or password';
         return false;
+    }
+
+    private function failedLogin($error)
+    {
+        $_SESSION['errors'] = $error;
+        header("Location:index.php");
     }
 }
