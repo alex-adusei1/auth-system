@@ -5,7 +5,7 @@ html, body {
 body {
     background-size: cover;
     background-position: center;
-    background: url('../images/forgot.jpg') center center no-repeat;
+    background-color: #7E57C2;
 }
 
 a {

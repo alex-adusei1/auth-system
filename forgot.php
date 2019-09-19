@@ -11,12 +11,12 @@
 
 </head>
  <body class="text-center">
-                <form action="" method="" class="main">
+                <form action="routes.php" method="post" class="main">
                     <img class="mb-4" src="images/brand.png" alt="brand" width="100" height="100">
                     <div class="header">
                         <h1 class="h2 mb-3 font-weight-normal">Reset Password</h1>
                     </div>
-                   
+                    <?php include 'errors.php' ?>
                     <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="email"> 
@@ -29,15 +29,6 @@
                         </div>
     
                         <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="password">
-                                    <i class="fa fa-lock"></i>
-                                    </span>
-                                </div>
-                                <input type="password" class="form-control" placeholder="Confirm Password" name="password" aria-label="password" aria-describedby="password" require>
-                            </div>
-                
-                    <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="password">
                             <i class="fa fa-lock"></i>
@@ -45,9 +36,18 @@
                         </div>
                         <input type="password" class="form-control" placeholder="Password" name="password" aria-label="password" aria-describedby="password" require>
                     </div>
+                    
+                        <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="password">
+                                    <i class="fa fa-lock"></i>
+                                    </span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Confirm Password" name="confirm" aria-label="password" aria-describedby="password" require>
+                            </div>
         
                     <div class="form-group"> 
-                        <button type="submit" name="signup" class="btn btn-success btn-md btn-block">
+                        <button type="submit" name="reset" class="btn btn-success btn-md btn-block">
                         <span class="spinner-grow text-light spinner" role="status" role="status"></span> Reset Password
                         </button>
                         <p class="mt-5 mb-3 text-light">&copy; <?php echo date('Y-m-d')?></p>

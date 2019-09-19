@@ -12,4 +12,8 @@ if (isset($_POST['signup'])) {
     LoginController::signup();
 }
 
+if(isset($_POST['reset'])){
+    LoginController::forgotpassword();
+}
+
     
