@@ -50,7 +50,7 @@
 
         </form>
         <span class="text-center">
-            <a href="#" class="li-lf">Forgot password?</a>
+            <a href="forgot.php" class="li-lf">Forgot password?</a>
             <a href="signup.php" class="li-rg">Don't have an account?</a> 
         </span>
 <!-- </div> -->

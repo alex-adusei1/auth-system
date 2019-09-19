@@ -75,7 +75,7 @@ class Model implements Base
     {
         try {
             if ($this->hasData($data) && $this->isUserRecordUnique($data['email'])) {
-                $data['password'] = $hash = password_hash($data['password'], PASSWORD_DEFAULT);
+                $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
                 $values = $this->determineValue(array_values($data), '?, ', '?');
                 $columns = implode(',', array_keys($data));
                 $stmt = $this->conn->prepare("INSERT INTO $this->Model ($columns) VALUES($values)");
@@ -87,6 +87,27 @@ class Model implements Base
 
                 return $stmt->execute();
 
+            }
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+            session_start();
+            $_SESSION['errors'] = $e->getMessage();
+        }
+    }
+
+    public function update(array $data)
+    {
+        try {
+            if ($this->hasData($data) && $this->getWhere(['email' => $data['email']])) {
+                $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+                $values = $this->determineValue(array_values($data), '?, ', '?');
+                $columns = implode(',', array_keys($data));
+                $stmt = $this->conn->prepare("UPDATE $this->Model SET password = ? WHERE email = ?");
+                $stmt->bind_param($this->determineValue($data, 's', 's'), $data['email'], $data['password']);
+                foreach ($data as $key => $value) {
+                    $key = $value;
+                }
+                return $stmt->execute();
             }
         } catch (Exception $e) {
             error_log($e->getMessage());
