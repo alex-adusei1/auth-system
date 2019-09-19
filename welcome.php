@@ -20,7 +20,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <span class="navbar-text">
-           <a href="#"><i class="fas fa-user"></i></a>
+           <a href="#"><i class="fas fa-user"></i> <?php echo ucwords($_SESSION['auth_user']->fullname)?> </a> 
           </span>
         </div>
       </nav>
