@@ -40,7 +40,8 @@
                     <i class="fa fa-lock"></i>
                     </span>
                 </div>
-                <input type="password" class="form-control" placeholder="Password" name="password" aria-label="password" aria-describedby="password" require>
+                <input type="password" class="form-control" minlength="8" placeholder="Password" name="password" aria-label="password" aria-describedby="password" require>
+                <small class="form-text text-light">The password must be 8 characters minimum</small>
             </div>
 
             <div class="form-group"> 
