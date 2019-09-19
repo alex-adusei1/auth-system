@@ -49,4 +49,11 @@ class Auth
         echo 'failed to authenticate user. Please check your username or password';
         return false;
     }
+    public function doLogout(){
+    session_start();
+    session_unset();
+    session_destroy();  
+    header("location: index.php");
+        
+    }
 }
