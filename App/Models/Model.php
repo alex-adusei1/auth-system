@@ -1,14 +1,16 @@
 <?php
 
-class Model extends Connection implements Base
+class Model implements Base
 {
 
     protected $bindData = [];
+    private $conn;
 
     public function __construct($model)
     {
         $this->Model = $model;
-        $this->connect();
+        $connection = Connection::getInstance();
+        $this->conn = $connection->connect();
     }
 
     /**
