@@ -9,8 +9,28 @@ class Model implements Base
     public function __construct($model)
     {
         $this->Model = $model;
-        $connection = Connection::getInstance();
-        $this->conn = $connection->connect();
+        // $connection = Connection::getInstance();
+        // $this->conn = $connection->connect();
+        $this->connect();
+    }
+
+    public function connect()
+    {
+        try {
+            if ($_SERVER['HTTP_HOST'] !== 'localhost') {
+                $this->conn = new mysqli(getenv('host'), getenv('username'), getenv('password'), getenv('database'));
+                if ($this->conn->connect_error) {
+                    throw new Exception("Connection failed: " . $this->conn->connect_error);
+                }
+            }
+            $this->conn = new mysqli($_SERVER['HTTP_HOST'], 'root', '', 'auth_system_db');
+            if ($this->conn->connect_error) {
+                throw new Exception("Connection failed: " . $this->conn->connect_error);
+            }
+
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 
     /**
