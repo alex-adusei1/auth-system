@@ -1,4 +1,6 @@
 <?php
+include 'App/DB/Connection.php';
+include 'App/Contracts/Base.php';
 include 'App/Factories/App.php';
 include 'App/Controller/LoginController.php';
 

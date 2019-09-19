@@ -1,8 +1,5 @@
 <?php
 
-include 'App/DB/Connection.php';
-include 'App/Contracts/Base.php';
-
 class Model extends Connection implements Base
 {
 
