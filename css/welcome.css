@@ -1,0 +1,16 @@
+body {
+    background-image: url("../images/welcome.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    height: 100%; 
+}
+
+.row .text-center{
+    margin-top: 10%;
+}
+
+.navbar .navbar-text {
+    margin-left: 95% ;
+}

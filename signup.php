@@ -15,10 +15,10 @@
             <span class="img-sp">
                 <img class="mb-4" src="images/brand.png" alt="brand" width="100" height="100">
             </span>
-                <div class="header">
+            <div class="header">
                 <h1 class="h2 mb-3 font-weight-normal">Create an account</h1>
             </div>
-
+            <?php include 'errors.php' ?>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="fullname"> 
@@ -52,8 +52,8 @@
                 </button>
             </div>
         </form>
-        <span class="gi">
-            <a href="index.php" class="btn btn-warning btn-sm">Return to login page</a>
+        <span class="lo-g">
+            <a href="index.php">Return to login page</a>
         </span>
 </body>
 </html>
