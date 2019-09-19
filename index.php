@@ -18,7 +18,7 @@
                 <div class="header">
                 <h1 class="h2 mb-3 font-weight-normal">Please Login</h1>
             </div>
-
+            <?php include 'errors.php' ?>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="email">
