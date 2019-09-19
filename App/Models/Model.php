@@ -9,8 +9,19 @@ class Model implements Base
     public function __construct($model)
     {
         $this->Model = $model;
-        $connection = Connection::getInstance();
-        $this->conn = $connection->connect();
+        $this->connect();
+    }
+
+    public function connect()
+    {
+        try {
+            $this->conn = new mysqli('us-cdbr-iron-east-02.cleardb.net', 'bdf3ad211feecb', '52ac6e0c', 'auth_system_db');
+            if ($this->conn->connect_error) {
+                throw new Exception("Connection failed: " . $this->conn->connect_error);
+            }
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 
     /**
