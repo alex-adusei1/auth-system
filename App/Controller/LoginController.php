@@ -17,4 +17,10 @@ class LoginController
     {
         App::auth()->doSignUp();
     }
+
+    
+    public static function forgotpassword()
+    {
+        App::auth()->doForgotPassword();
+    }
 }
