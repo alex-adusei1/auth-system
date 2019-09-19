@@ -1,7 +1,7 @@
 <?php
 
-include '../DB/Connection.php';
-include '../Contracts/Base.php';
+include 'App/DB/Connection.php';
+include 'App/Contracts/Base.php';
 
 class Model extends Connection implements Base
 {
@@ -41,6 +41,15 @@ class Model extends Connection implements Base
         return $result ? $result->fetch_object() : [];
     }
 
+    /**
+     * Insert record to DB
+     */
+    public function save(array $data)
+    {
+        //@todo
+    }
+
+    
     private function fetchWithWhere($condition)
     {
         $string_condition = $this->perparedWhere($condition);
@@ -71,14 +80,16 @@ class Model extends Connection implements Base
         return $where_string;
     }
 
-    private function fetchWithId(int $id) {
+    private function fetchWithId(int $id)
+    {
         $stmt = $this->conn->prepare("SELECT * FROM $this->Model WHERE id = ? ");
         $stmt->bind_param('i', $id);
         $stmt->execute();
         return $stmt->get_result();
     }
 
-    private function fetchAll() {
+    private function fetchAll()
+    {
         $stmt = $this->conn->prepare("SELECT * FROM $this->Model");
         $stmt->execute();
         return $stmt->get_result();

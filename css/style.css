@@ -76,6 +76,27 @@ a:active {
     margin-top: 20px;
 }
 
+.lo-g {
+    color: seashell;
+    font-weight: 400;
+    font-stretch: expanded;
+    text-decoration: none;
+    margin-left: 95px;
+}
+
+.gi {
+    margin-left:97px; 
+    margin-top:10px;
+    text-decoration: none;
+}
+
+.gi > a:hover {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: .875rem;
+    font-weight: 400;
+}
+
 .li-lf {
     float: left;
     color: #fff;
